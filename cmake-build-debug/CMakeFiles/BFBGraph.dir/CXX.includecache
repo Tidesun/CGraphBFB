@@ -58,6 +58,10 @@ unordered_map
 Graph.hpp
 ../include/Graph.hpp
 
+/Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp
+bfb_algorithm.hpp
+/Users/tidesun/repos/BFBGraph/src/bfb_algorithm.hpp
+
 /Users/tidesun/repos/BFBGraph/src/main.cpp
 iostream
 -

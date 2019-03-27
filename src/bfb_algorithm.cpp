@@ -10,9 +10,14 @@
 using namespace std;
 const char baseDir = '+';
 BFBAlgorithm::BFBAlgorithm(Graph g){
+    g.setAvgPloidy(2);
+    g.setAvgRawCoverage(2);
+    g.setPurity(1);
+    g.calculateCopyNum();
     for (auto const & segment:*g.getSegments()){
         allSegments.push_back(*segment);
     }
+    observedLen = 13;
 }
 vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens){
     vector<int> candidateArmLens(1,0);
@@ -39,6 +44,9 @@ vector<Vertex> BFBAlgorithm::createBase(){
     return base;
 }
 bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens){
+    if (path.size() > observedLen){
+        return false;
+    }
     if (path.size()== observedLen) {
         for (auto vertex:path) {
             cout<<vertex.getInfo()<<' ';
@@ -48,7 +56,7 @@ bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
     Vertex lastVertex = path.back();
     vector<Vertex> candidates = getCandidates(lastVertex);
     for (auto const& candidate:candidates) {
-        Edge * connectedEdge = getConnectedEdge(candidate,lastVertex);
+        Edge * connectedEdge = getConnectedEdge(lastVertex,candidate);
         if (!connectedEdge || !connectedEdge->hasCopy()){
             continue;
         }
@@ -58,13 +66,14 @@ bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
 
             allArmLens.push_back(candidateArmLens);
             path.push_back(candidate);
+            int edgeCN = connectedEdge->getWeight()->getCopyNum();
             connectedEdge->traverse();
             if (BFBTraverse(path,allArmLens)){
                 return true;
             } else {
                 allArmLens.pop_back();
                 path.pop_back();
-                connectedEdge->recover();
+                connectedEdge->recover(edgeCN);
             };
         }
     }
@@ -104,6 +113,7 @@ vector<Vertex> BFBAlgorithm::getCandidates(Vertex lastVertex) {
     return candidates;
 }
 Edge* BFBAlgorithm::getConnectedEdge(Vertex source, Vertex target) {
+//    cout<<source.getInfo();
     for (Edge* edge: *source.getEdgesAsSource()){
         if (edge->getTarget()->getId() == target.getId() && edge->getTarget()->getDir() == target.getDir()) {
             return edge;

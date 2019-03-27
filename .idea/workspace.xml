@@ -12,7 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2c27cec-d49f-47f0-9064-a428ec9ed382" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BFBGraph" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BFBGraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BFBGraph.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BFBGraph.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/bfb_algorithm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/bfb_algorithm.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bfb_algorithm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bfb_algorithm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,44 +29,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bfb_algorithm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="169">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Segment.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-267">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vertex.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="74" column="67" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="325">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <element signature="e#129#148#0" expanded="true" />
               </folding>
@@ -72,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="326">
               <caret line="57" column="18" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -84,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2606">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="6028">
+              <caret line="341" column="110" selection-start-line="341" selection-start-column="101" selection-end-line="341" selection-end-column="110" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -94,10 +75,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/Weight.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Weight.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/bfb_algorithm.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="252">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
                 <element signature="e#191#210#0" expanded="true" />
               </folding>
@@ -109,12 +108,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addJunction</find>
       <find>allSegments</find>
       <find>addJu</find>
       <find>getSegmentById</find>
       <find>SegmentDoesNotExistException</find>
       <find>getSegments</find>
+      <find>setCopyNum</find>
+      <find>calculateCopyNum</find>
+      <find>mAvgCoverageRaw</find>
+      <find>addJunction</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,9 +129,9 @@
         <option value="$PROJECT_DIR$/src/Graph.cpp" />
         <option value="$PROJECT_DIR$/src/Vertex.cpp" />
         <option value="$PROJECT_DIR$/src/Junction.cpp" />
-        <option value="$PROJECT_DIR$/src/bfb_algorithm.cpp" />
         <option value="$PROJECT_DIR$/include/bfb_algorithm.hpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/bfb_algorithm.cpp" />
       </list>
     </option>
   </component>
@@ -203,12 +205,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553563666651</updated>
       <workItem from="1553563667841" duration="638000" />
-      <workItem from="1553564429776" duration="21464000" />
+      <workItem from="1553564429776" duration="27966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22102000" />
+    <option name="totallyTimeSpent" value="28604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
@@ -218,13 +220,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32944345" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994614" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24057451" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.46499103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32944345" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32944345" />
@@ -246,13 +248,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/bfb_algorithm.cpp</url>
-          <line>51</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/bfb_algorithm.cpp</url>
-          <line>106</line>
-          <option name="timeStamp" value="13" />
+          <line>67</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -287,13 +284,6 @@
         <state relative-caret-position="-624" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/Graph.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exceptions.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -308,13 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Vertex.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -346,16 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Segment.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-267">
@@ -366,26 +339,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/Graph.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-877">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Junction.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="40" />
+        <state relative-caret-position="6">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weight.cpp">
+    <entry file="file://$PROJECT_DIR$/include/Vertex.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="401">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1015">
+          <caret line="74" column="67" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Edge.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="326">
           <caret line="57" column="18" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -393,40 +383,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bfb_algorithm.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/bfb_algorithm.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#191#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2606">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="6028">
+          <caret line="341" column="110" selection-start-line="341" selection-start-column="101" selection-end-line="341" selection-end-column="110" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/Weight.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weight.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bfb_algorithm.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#191#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="325">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#129#148#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bfb_algorithm.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>

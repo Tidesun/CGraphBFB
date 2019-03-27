@@ -18,7 +18,7 @@ using namespace std;
 class BFBAlgorithm {
     private:
         vector<Segment> allSegments;
-        int observedLen = 5;
+        int observedLen;
         unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
     public:
         BFBAlgorithm(Graph g);
