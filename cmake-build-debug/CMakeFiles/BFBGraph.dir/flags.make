@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++14
 
-CXX_DEFINES = 
+CXX_DEFINES = -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO
 
-CXX_INCLUDES = -I/Users/tidesun/repos/BFBGraph/include -I/usr/local/include 
+CXX_INCLUDES = -I/Users/tidesun/repos/BFBGraph/include -isystem /usr/local/include -isystem /usr/local/opt/openssl/include 
 

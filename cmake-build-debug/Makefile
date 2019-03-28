@@ -366,32 +366,32 @@ src/bfb_algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s
 .PHONY : src/bfb_algorithm.cpp.s
 
-src/httpserver.o: src/httpserver.cpp.o
+src/httphandler.o: src/httphandler.cpp.o
 
-.PHONY : src/httpserver.o
+.PHONY : src/httphandler.o
 
 # target to build an object file
-src/httpserver.cpp.o:
-	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o
-.PHONY : src/httpserver.cpp.o
+src/httphandler.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o
+.PHONY : src/httphandler.cpp.o
 
-src/httpserver.i: src/httpserver.cpp.i
+src/httphandler.i: src/httphandler.cpp.i
 
-.PHONY : src/httpserver.i
+.PHONY : src/httphandler.i
 
 # target to preprocess a source file
-src/httpserver.cpp.i:
-	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.i
-.PHONY : src/httpserver.cpp.i
+src/httphandler.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httphandler.cpp.i
+.PHONY : src/httphandler.cpp.i
 
-src/httpserver.s: src/httpserver.cpp.s
+src/httphandler.s: src/httphandler.cpp.s
 
-.PHONY : src/httpserver.s
+.PHONY : src/httphandler.s
 
 # target to generate assembly for a file
-src/httpserver.cpp.s:
-	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.s
-.PHONY : src/httpserver.cpp.s
+src/httphandler.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httphandler.cpp.s
+.PHONY : src/httphandler.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -456,9 +456,9 @@ help:
 	@echo "... src/bfb_algorithm.o"
 	@echo "... src/bfb_algorithm.i"
 	@echo "... src/bfb_algorithm.s"
-	@echo "... src/httpserver.o"
-	@echo "... src/httpserver.i"
-	@echo "... src/httpserver.s"
+	@echo "... src/httphandler.o"
+	@echo "... src/httphandler.i"
+	@echo "... src/httphandler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

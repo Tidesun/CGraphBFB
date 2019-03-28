@@ -4,7 +4,9 @@ project(BFBGraph)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
-find_package(Boost 1.67.0 COMPONENTS system filesystem REQUIRED)
+
+find_package(Boost COMPONENTS random system thread filesystem chrono atomic date_time regex)
+find_package(cpprestsdk REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 add_executable(BFBGraph
@@ -25,5 +27,5 @@ add_executable(BFBGraph
         src/Segment.cpp
         src/Vertex.cpp
         src/Weight.cpp
-        main.cpp src/httpserver.cpp)
-target_link_libraries(BFBGraph ${Boost_LIBRARIES})
+        main.cpp src/httphandler.cpp include/httphandler.h include/stdafx.h)
+target_link_libraries(BFBGraph ${Boost_LIBRARIES} cpprestsdk::cpprest)

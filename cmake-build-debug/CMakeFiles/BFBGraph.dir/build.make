@@ -187,18 +187,18 @@ CMakeFiles/BFBGraph.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/main.cpp -o CMakeFiles/BFBGraph.dir/main.cpp.s
 
-CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
-CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o: ../src/httpserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o -c /Users/tidesun/repos/BFBGraph/src/httpserver.cpp
+CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
+CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o: ../src/httphandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o -c /Users/tidesun/repos/BFBGraph/src/httphandler.cpp
 
-CMakeFiles/BFBGraph.dir/src/httpserver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/httpserver.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/httpserver.cpp > CMakeFiles/BFBGraph.dir/src/httpserver.cpp.i
+CMakeFiles/BFBGraph.dir/src/httphandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/httphandler.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/httphandler.cpp > CMakeFiles/BFBGraph.dir/src/httphandler.cpp.i
 
-CMakeFiles/BFBGraph.dir/src/httpserver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/httpserver.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/httpserver.cpp -o CMakeFiles/BFBGraph.dir/src/httpserver.cpp.s
+CMakeFiles/BFBGraph.dir/src/httphandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/httphandler.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/httphandler.cpp -o CMakeFiles/BFBGraph.dir/src/httphandler.cpp.s
 
 # Object files for target BFBGraph
 BFBGraph_OBJECTS = \
@@ -212,7 +212,7 @@ BFBGraph_OBJECTS = \
 "CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o" \
 "CMakeFiles/BFBGraph.dir/src/Weight.cpp.o" \
 "CMakeFiles/BFBGraph.dir/main.cpp.o" \
-"CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o"
+"CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o"
 
 # External object files for target BFBGraph
 BFBGraph_EXTERNAL_OBJECTS =
@@ -227,10 +227,19 @@ BFBGraph: CMakeFiles/BFBGraph.dir/src/Segment.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/src/Weight.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/main.cpp.o
-BFBGraph: CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o
+BFBGraph: CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/build.make
+BFBGraph: /usr/local/lib/libboost_random.dylib
 BFBGraph: /usr/local/lib/libboost_system.dylib
+BFBGraph: /usr/local/lib/libboost_thread.dylib
 BFBGraph: /usr/local/lib/libboost_filesystem.dylib
+BFBGraph: /usr/local/lib/libboost_chrono.dylib
+BFBGraph: /usr/local/lib/libboost_atomic.dylib
+BFBGraph: /usr/local/lib/libboost_date_time.dylib
+BFBGraph: /usr/local/lib/libboost_regex.dylib
+BFBGraph: /usr/local/lib/libcpprest.2.10.dylib
+BFBGraph: /usr/local/opt/openssl/lib/libssl.dylib
+BFBGraph: /usr/local/opt/openssl/lib/libcrypto.dylib
 BFBGraph: CMakeFiles/BFBGraph.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable BFBGraph"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BFBGraph.dir/link.txt --verbose=$(VERBOSE)

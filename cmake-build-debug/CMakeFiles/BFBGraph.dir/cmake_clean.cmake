@@ -9,7 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o"
   "CMakeFiles/BFBGraph.dir/src/Weight.cpp.o"
   "CMakeFiles/BFBGraph.dir/main.cpp.o"
-  "CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o"
+  "CMakeFiles/BFBGraph.dir/src/httphandler.cpp.o"
   "BFBGraph.pdb"
   "BFBGraph"
 )

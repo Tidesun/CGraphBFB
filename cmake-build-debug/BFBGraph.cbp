@@ -5,7 +5,7 @@
 		<Option title="BFBGraph"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cpprestsdk\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/tidesun/repos/BFBGraph/cmake-build-debug"/>
@@ -44,8 +44,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCPPREST_FORCE_HTTP_CLIENT_ASIO"/>
+					<Add option="-DCPPREST_FORCE_HTTP_LISTENER_ASIO"/>
 					<Add directory="/Users/tidesun/repos/BFBGraph/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/opt/openssl/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -66,8 +69,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCPPREST_FORCE_HTTP_CLIENT_ASIO"/>
+					<Add option="-DCPPREST_FORCE_HTTP_LISTENER_ASIO"/>
 					<Add directory="/Users/tidesun/repos/BFBGraph/include"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/opt/openssl/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -106,6 +112,12 @@
 		<Unit filename="/Users/tidesun/repos/BFBGraph/include/bfb_algorithm.hpp">
 			<Option target="BFBGraph"/>
 		</Unit>
+		<Unit filename="/Users/tidesun/repos/BFBGraph/include/httphandler.h">
+			<Option target="BFBGraph"/>
+		</Unit>
+		<Unit filename="/Users/tidesun/repos/BFBGraph/include/stdafx.h">
+			<Option target="BFBGraph"/>
+		</Unit>
 		<Unit filename="/Users/tidesun/repos/BFBGraph/main.cpp">
 			<Option target="BFBGraph"/>
 		</Unit>
@@ -133,7 +145,7 @@
 		<Unit filename="/Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp">
 			<Option target="BFBGraph"/>
 		</Unit>
-		<Unit filename="/Users/tidesun/repos/BFBGraph/src/httpserver.cpp">
+		<Unit filename="/Users/tidesun/repos/BFBGraph/src/httphandler.cpp">
 			<Option target="BFBGraph"/>
 		</Unit>
 		<Unit filename="/Users/tidesun/repos/BFBGraph/src/main.cpp">
@@ -141,6 +153,15 @@
 		</Unit>
 		<Unit filename="/Users/tidesun/repos/BFBGraph/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/tidesun/repos/BFBGraph/../../../../usr/local/lib/cpprestsdk/cpprestsdk-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cpprestsdk\"/>
+		</Unit>
+		<Unit filename="/Users/tidesun/repos/BFBGraph/../../../../usr/local/lib/cpprestsdk/cpprestsdk-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cpprestsdk\"/>
+		</Unit>
+		<Unit filename="/Users/tidesun/repos/BFBGraph/../../../../usr/local/lib/cpprestsdk/cpprestsdk-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cpprestsdk\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
