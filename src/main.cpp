@@ -7,23 +7,11 @@
 //
 
 #include <iostream>
-#include <unordered_map>
 #include "bfb_algorithm.hpp"
+#include "httpserver.cpp"
 using namespace std;
+
 int main() {
-//    BFBAlgorithm bfbAlgo = BFBAlgorithm();
-//    cout<<bfbAlgo.BFBTraverseUtil(2);
-//BAABCCBAAAABC
-    Graph g = Graph();
-    g.addSegment(1,3,1);
-    g.addSegment(2,4,1);
-    g.addSegment(3,6,1);
-    g.addJunction(1,'+',2,'+',3,1);
-    g.addJunction(2,'+',3,'+',4,1);
-    g.addJunction(3,'+',3,'-',3,1);
-    g.addJunction(3,'-',3,'+',1,1);
-    g.addJunction(1,'-',1,'+',1,1);
-    BFBAlgorithm bfbAlgo = BFBAlgorithm(g);
-    bfbAlgo.BFBTraverseUtil();
+    httpServer().run_server("0.0.0.0","8080");
     return 0;
 }

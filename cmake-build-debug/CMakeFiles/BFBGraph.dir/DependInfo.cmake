@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/tidesun/repos/BFBGraph/src/Vertex.cpp" "/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o"
   "/Users/tidesun/repos/BFBGraph/src/Weight.cpp" "/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles/BFBGraph.dir/src/Weight.cpp.o"
   "/Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp" "/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o"
+  "/Users/tidesun/repos/BFBGraph/src/httpserver.cpp" "/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o"
   "/Users/tidesun/repos/BFBGraph/src/main.cpp" "/Users/tidesun/repos/BFBGraph/cmake-build-debug/CMakeFiles/BFBGraph.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
@@ -20,6 +21,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.

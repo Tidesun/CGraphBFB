@@ -4,6 +4,8 @@ project(BFBGraph)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
+find_package(Boost 1.67.0 COMPONENTS system filesystem REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
 add_executable(BFBGraph
         include/bfb_algorithm.hpp
@@ -23,4 +25,5 @@ add_executable(BFBGraph
         src/Segment.cpp
         src/Vertex.cpp
         src/Weight.cpp
-        main.cpp)
+        main.cpp src/httpserver.cpp)
+target_link_libraries(BFBGraph ${Boost_LIBRARIES})

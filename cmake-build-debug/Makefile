@@ -366,6 +366,33 @@ src/bfb_algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s
 .PHONY : src/bfb_algorithm.cpp.s
 
+src/httpserver.o: src/httpserver.cpp.o
+
+.PHONY : src/httpserver.o
+
+# target to build an object file
+src/httpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.o
+.PHONY : src/httpserver.cpp.o
+
+src/httpserver.i: src/httpserver.cpp.i
+
+.PHONY : src/httpserver.i
+
+# target to preprocess a source file
+src/httpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.i
+.PHONY : src/httpserver.cpp.i
+
+src/httpserver.s: src/httpserver.cpp.s
+
+.PHONY : src/httpserver.s
+
+# target to generate assembly for a file
+src/httpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/httpserver.cpp.s
+.PHONY : src/httpserver.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -429,6 +456,9 @@ help:
 	@echo "... src/bfb_algorithm.o"
 	@echo "... src/bfb_algorithm.i"
 	@echo "... src/bfb_algorithm.s"
+	@echo "... src/httpserver.o"
+	@echo "... src/httpserver.i"
+	@echo "... src/httpserver.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

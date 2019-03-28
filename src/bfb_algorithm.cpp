@@ -48,9 +48,7 @@ bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
         return false;
     }
     if (path.size()== observedLen) {
-        for (auto vertex:path) {
-            cout<<vertex.getInfo()<<' ';
-        }
+        result = path;
         return true;
     }
     Vertex lastVertex = path.back();
@@ -84,6 +82,13 @@ bool BFBAlgorithm::BFBTraverseUtil() {
     vector<vector<int>> allArmLens(allSegments.size(),vector<int>(1,0));
     vector<Vertex> path = createBase();
     return BFBTraverse(path,allArmLens);
+}
+string BFBAlgorithm::getResult() {
+    string res;
+    for (auto & vertex: result) {
+        res += vertex.getInfo() + ' ';
+    }
+    return res;
 }
 bool BFBAlgorithm::isSymmetric(Vertex former, Vertex candidate) {
     return former.getId()==candidate.getId() && former.getDir() != candidate.getDir();

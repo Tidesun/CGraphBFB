@@ -18,6 +18,7 @@ using namespace std;
 class BFBAlgorithm {
     private:
         vector<Segment> allSegments;
+        vector<Vertex> result;
         int observedLen;
         unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
     public:
@@ -29,5 +30,6 @@ class BFBAlgorithm {
         Edge* getConnectedEdge(Vertex source, Vertex target);
         bool BFBTraverseUtil();
         bool isSymmetric(Vertex former, Vertex candidate);
+        string getResult();
 };
 #endif /* bfb_algorithm_hpp */
