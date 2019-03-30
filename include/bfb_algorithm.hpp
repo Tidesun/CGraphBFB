@@ -18,18 +18,20 @@ using namespace std;
 class BFBAlgorithm {
     private:
         vector<Segment> allSegments;
-        vector<Vertex> result;
+        vector<Vertex> resultPath;
+        Graph* g;
+        double resultLoss;
         int observedLen;
         unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
     public:
         BFBAlgorithm(Graph g);
         vector<Vertex> createBase();
         vector<int> calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens);
-        bool BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens);
+        bool BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss);
         vector<Vertex> getCandidates(Vertex lastVertex);
         Edge* getConnectedEdge(Vertex source, Vertex target);
         bool BFBTraverseUtil();
         bool isSymmetric(Vertex former, Vertex candidate);
-        string getResult();
+        void getResult();
 };
 #endif /* bfb_algorithm_hpp */

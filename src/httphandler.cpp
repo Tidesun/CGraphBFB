@@ -42,21 +42,7 @@ void httphandler::handle_get(http_request message)
     message.relative_uri().path();
     //Dbms* d  = new Dbms();
     //d->connect();
-    Graph g = Graph();
-    g.addSegment(1,3,1);
-    g.addSegment(2,4,1);
-    g.addSegment(3,6,1);
-    g.addJunction(1,'+',2,'+',3,1);
-    g.addJunction(2,'+',3,'+',4,1);
-    g.addJunction(3,'+',3,'-',3,1);
-    g.addJunction(3,'-',3,'+',1,1);
-    g.addJunction(1,'-',1,'+',1,1);
-    BFBAlgorithm bfbAlgo = BFBAlgorithm(g);
-    string result;
-    if (bfbAlgo.BFBTraverseUtil()) {
-        result = bfbAlgo.getResult();
-    }
-    message.reply(status_codes::OK,result);
+    message.reply(status_codes::OK," ");
     return;
 
 };
@@ -67,8 +53,11 @@ void httphandler::handle_get(http_request message)
 void httphandler::handle_post(http_request message)
 {
     ucout <<  message.to_string() << endl;
-
-
+    auto fileStream = std::make_shared<concurrency::streams::ostream>();
+    concurrency::streams::ostream outFile = concurrency::streams::fstream::open_ostream(U("../static/graph.dat")).get();
+    *fileStream = outFile;
+    message.body().read_to_end(fileStream->streambuf()).get();
+    fileStream->close().get();
     message.reply(status_codes::OK,message.to_string());
     return ;
 };

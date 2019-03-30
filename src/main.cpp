@@ -42,21 +42,38 @@ void on_shutdown()
 }
 
 int main(int argc, char *argv[]) {
-    utility::string_t port = U("34568");
-    if(argc == 2)
-    {
-        port = argv[1];
-    }
-
-    utility::string_t address = U("http://127.0.0.1:");
-    address.append(port);
-
-    on_initialize(address);
-    std::cout << "Press ENTER to exit." << std::endl;
-
-    std::string line;
-    std::getline(std::cin, line);
-
-    on_shutdown();
+//    utility::string_t port = U("34568");
+//    if(argc == 2)
+//    {
+//        port = argv[1];
+//    }
+//
+//    utility::string_t address = U("http://127.0.0.1:");
+//    address.append(port);
+//
+//    on_initialize(address);
+//    std::cout << "Press ENTER to exit." << std::endl;
+//
+//    std::string line;
+//    std::getline(std::cin, line);
+//
+//    on_shutdown();
+    Graph g = Graph();
+    g.readGraph("../static/sim_1.lh");
+//    g.addSegment(1,3,1);
+//    g.addSegment(2,4,1);
+//    g.addSegment(3,6,1);
+//    g.addJunction(1,'+',2,'+',3,1);
+//    g.addJunction(2,'+',3,'+',4,1);
+//    g.addJunction(3,'+',3,'-',3,1);
+//    g.addJunction(3,'-',3,'+',1,1);
+//    g.addJunction(1,'-',1,'+',1,1);
+//    g.setAvgPloidy(2);
+//    g.setAvgRawCoverage(2);
+//    g.setPurity(1);
+    g.calculateCopyNum();
+    BFBAlgorithm bfbAlgo = BFBAlgorithm(g);
+    bfbAlgo.BFBTraverseUtil();
+    bfbAlgo.getResult();
     return 0;
 }

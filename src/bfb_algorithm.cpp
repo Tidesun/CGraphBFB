@@ -9,15 +9,15 @@
 #include "bfb_algorithm.hpp"
 using namespace std;
 const char baseDir = '+';
-BFBAlgorithm::BFBAlgorithm(Graph g){
-    g.setAvgPloidy(2);
-    g.setAvgRawCoverage(2);
-    g.setPurity(1);
-    g.calculateCopyNum();
-    for (auto const & segment:*g.getSegments()){
+BFBAlgorithm::BFBAlgorithm(Graph _g){
+    g = &_g;
+    double cnSum = 0.0;
+    for (auto const & segment:*_g.getSegments()){
         allSegments.push_back(*segment);
+        cnSum += segment->getWeight()->getCopyNum();
     }
-    observedLen = 13;
+    resultLoss = (numeric_limits<double>::max)();
+    observedLen = (int) floor(cnSum);
 }
 vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens){
     vector<int> candidateArmLens(1,0);
@@ -43,36 +43,40 @@ vector<Vertex> BFBAlgorithm::createBase(){
     }
     return base;
 }
-bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens){
-    if (path.size() > observedLen){
+bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss){
+    if (path.size() > observedLen || loss>resultLoss){
         return false;
     }
-    if (path.size()== observedLen) {
-        result = path;
+    if (path.size()== observedLen && loss<resultLoss) {
+        resultPath = path;
+        resultLoss = loss;
+        cout<< resultLoss<< endl;
         return true;
     }
     Vertex lastVertex = path.back();
     vector<Vertex> candidates = getCandidates(lastVertex);
-    for (auto const& candidate:candidates) {
-        Edge * connectedEdge = getConnectedEdge(lastVertex,candidate);
-        if (!connectedEdge || !connectedEdge->hasCopy()){
-            continue;
-        }
+    for (auto & candidate:candidates) {
         vector<int> candidateArmLens = calculateCandidateArmLens(candidate,path,allArmLens);
         // if the candidate can form a palindrome
         if (candidateArmLens.size()>1) {
-
             allArmLens.push_back(candidateArmLens);
             path.push_back(candidate);
-            int edgeCN = connectedEdge->getWeight()->getCopyNum();
+
+            Edge * connectedEdge = getConnectedEdge(lastVertex,candidate);
+            if (!connectedEdge || !connectedEdge->hasCopy()){
+                loss += connectedEdge?1.0 - connectedEdge->getWeight()->getCopyNum():1.0;
+                auto _junc =
+                        new Junction(lastVertex.getSegment(),candidate.getSegment(),lastVertex.getDir(),candidate.getDir(),1.0,1.0);
+                double juncCopy = _junc->getWeight()->getCoverage() / (g->getAvgRawCoverage()/g->getAvgPloidy());
+                _junc->getWeight()->setCopyNum(max(juncCopy, 0.0));
+                connectedEdge = _junc->getEdgeA();
+            }
+
             connectedEdge->traverse();
-            if (BFBTraverse(path,allArmLens)){
-                return true;
-            } else {
-                allArmLens.pop_back();
-                path.pop_back();
-                connectedEdge->recover(edgeCN);
-            };
+            BFBTraverse(path,allArmLens,loss);
+            allArmLens.pop_back();
+            path.pop_back();
+            connectedEdge->recover();
         }
     }
     return false;
@@ -81,14 +85,15 @@ bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
 bool BFBAlgorithm::BFBTraverseUtil() {
     vector<vector<int>> allArmLens(allSegments.size(),vector<int>(1,0));
     vector<Vertex> path = createBase();
-    return BFBTraverse(path,allArmLens);
+    return BFBTraverse(path,allArmLens,0.0);
 }
-string BFBAlgorithm::getResult() {
+void BFBAlgorithm::getResult() {
     string res;
-    for (auto & vertex: result) {
+    for (auto & vertex: resultPath) {
         res += vertex.getInfo() + ' ';
     }
-    return res;
+    cout<<res<<endl;
+    cout<< resultLoss/observedLen<<endl;
 }
 bool BFBAlgorithm::isSymmetric(Vertex former, Vertex candidate) {
     return former.getId()==candidate.getId() && former.getDir() != candidate.getDir();
