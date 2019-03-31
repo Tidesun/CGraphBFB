@@ -12,26 +12,27 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <array>
 #include "Graph.hpp"
 using namespace std;
-
 class BFBAlgorithm {
     private:
         vector<Segment> allSegments;
         vector<Vertex> resultPath;
-        Graph* g;
-        double resultLoss;
+        double resultCost;
         int observedLen;
+        char baseDir;
+        double haploidDepth;
         unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
+        unordered_map<int,unordered_map<int,array<array<Edge*,2>,2>>> adjacentMatrix;
     public:
         BFBAlgorithm(Graph g);
         vector<Vertex> createBase();
         vector<int> calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens);
-        bool BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss);
-        vector<Vertex> getCandidates(Vertex lastVertex);
-        Edge* getConnectedEdge(Vertex source, Vertex target);
+        void BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss);
+        vector<Vertex>  getCandidates(Vertex lastVertex);
+        void generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment);
         bool BFBTraverseUtil();
-        bool isSymmetric(Vertex former, Vertex candidate);
-        void getResult();
+        void printResult();
 };
 #endif /* bfb_algorithm_hpp */

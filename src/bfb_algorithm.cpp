@@ -8,16 +8,16 @@
 
 #include "bfb_algorithm.hpp"
 using namespace std;
-const char baseDir = '+';
-BFBAlgorithm::BFBAlgorithm(Graph _g){
-    g = &_g;
+BFBAlgorithm::BFBAlgorithm(Graph g){
     double cnSum = 0.0;
-    for (auto const & segment:*_g.getSegments()){
+    for (auto const & segment:*g.getSegments()){
         allSegments.push_back(*segment);
         cnSum += segment->getWeight()->getCopyNum();
     }
-    resultLoss = (numeric_limits<double>::max)();
+    resultCost = (numeric_limits<double>::max)();
     observedLen = (int) floor(cnSum);
+    baseDir = '+';
+    haploidDepth = g.getAvgRawCoverage()/g.getAvgPloidy();
 }
 vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens){
     vector<int> candidateArmLens(1,0);
@@ -27,7 +27,8 @@ vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vert
     // iterate over all palindromes suffix ended with last char
     for (auto armLen : lastArmLens){
         // if a symmetric segment to candidate is found
-        if (isSymmetric(BFBPath[lastPos-armLen*2],candidate)) {
+        Vertex former = BFBPath[lastPos-armLen*2];
+        if (former.getId()==candidate.getId() && former.getDir() != candidate.getDir()) {
             candidateArmLens.push_back(armLen+1);
         }
     }
@@ -38,20 +39,28 @@ vector<Vertex> BFBAlgorithm::createBase(){
     vector<Vertex> base;
     for (int i=0;i<allSegments.size();i++) {
         base.push_back(*allSegments[i].getPositiveVertex());
-        vertexOrderMap[allSegments[i].getId()].first = i > 0 ? &allSegments[i-1] : nullptr;
-        vertexOrderMap[allSegments[i].getId()].second = i< allSegments.size()-1 ? &allSegments[i+1]: nullptr;
+        if (i > 0) {
+            vertexOrderMap[allSegments[i].getId()].first = &allSegments[i-1];
+            generateAdjacentMatrix(allSegments[i],allSegments[i-1]);
+        }
+        if (i < allSegments.size() - 1) {
+            vertexOrderMap[allSegments[i].getId()].second = &allSegments[i+1];
+            generateAdjacentMatrix(allSegments[i],allSegments[i+1]);
+        }
     }
     return base;
 }
-bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss){
-    if (path.size() > observedLen || loss>resultLoss){
-        return false;
-    }
-    if (path.size()== observedLen && loss<resultLoss) {
+void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double cost){
+    // if a better solution is found
+    if (path.size()== observedLen && cost<resultCost) {
         resultPath = path;
-        resultLoss = loss;
-        cout<< resultLoss<< endl;
-        return true;
+        resultCost = cost;
+        cout<< resultCost<< endl;
+        return;
+    }
+    // if the path is too long or cost has exceeded the best cost
+    if (path.size() > observedLen || cost>=resultCost){
+        return;
     }
     Vertex lastVertex = path.back();
     vector<Vertex> candidates = getCandidates(lastVertex);
@@ -59,44 +68,45 @@ bool BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
         vector<int> candidateArmLens = calculateCandidateArmLens(candidate,path,allArmLens);
         // if the candidate can form a palindrome
         if (candidateArmLens.size()>1) {
+            double tempCost = cost;
             allArmLens.push_back(candidateArmLens);
             path.push_back(candidate);
-
-            Edge * connectedEdge = getConnectedEdge(lastVertex,candidate);
+            int sourceDir = lastVertex.getDir() == '+' ? 0: 1;
+            int targetDir = candidate.getDir() == '+' ? 0: 1;
+            Edge * connectedEdge = adjacentMatrix[lastVertex.getId()][candidate.getId()][sourceDir][targetDir];
             if (!connectedEdge || !connectedEdge->hasCopy()){
-                loss += connectedEdge?1.0 - connectedEdge->getWeight()->getCopyNum():1.0;
+                tempCost += connectedEdge?1.0 - connectedEdge->getWeight()->getCopyNum():1.0;
                 auto _junc =
                         new Junction(lastVertex.getSegment(),candidate.getSegment(),lastVertex.getDir(),candidate.getDir(),1.0,1.0);
-                double juncCopy = _junc->getWeight()->getCoverage() / (g->getAvgRawCoverage()/g->getAvgPloidy());
+                double juncCopy = _junc->getWeight()->getCoverage() / haploidDepth;
                 _junc->getWeight()->setCopyNum(max(juncCopy, 0.0));
                 connectedEdge = _junc->getEdgeA();
             }
 
             connectedEdge->traverse();
-            BFBTraverse(path,allArmLens,loss);
+            BFBTraverse(path,allArmLens,tempCost);
             allArmLens.pop_back();
             path.pop_back();
             connectedEdge->recover();
         }
     }
-    return false;
 
 }
 bool BFBAlgorithm::BFBTraverseUtil() {
     vector<vector<int>> allArmLens(allSegments.size(),vector<int>(1,0));
     vector<Vertex> path = createBase();
-    return BFBTraverse(path,allArmLens,0.0);
+    BFBTraverse(path,allArmLens,0.0);
+    if (!resultPath.empty())
+        return true;
+    return false;
 }
-void BFBAlgorithm::getResult() {
+void BFBAlgorithm::printResult() {
     string res;
     for (auto & vertex: resultPath) {
         res += vertex.getInfo() + ' ';
     }
     cout<<res<<endl;
-    cout<< resultLoss/observedLen<<endl;
-}
-bool BFBAlgorithm::isSymmetric(Vertex former, Vertex candidate) {
-    return former.getId()==candidate.getId() && former.getDir() != candidate.getDir();
+    cout<< resultCost<<endl;
 }
 vector<Vertex> BFBAlgorithm::getCandidates(Vertex lastVertex) {
     vector<Vertex> candidates;
@@ -122,12 +132,15 @@ vector<Vertex> BFBAlgorithm::getCandidates(Vertex lastVertex) {
     candidates.push_back(*lastVertex.getComplementVertex());
     return candidates;
 }
-Edge* BFBAlgorithm::getConnectedEdge(Vertex source, Vertex target) {
-//    cout<<source.getInfo();
-    for (Edge* edge: *source.getEdgesAsSource()){
-        if (edge->getTarget()->getId() == target.getId() && edge->getTarget()->getDir() == target.getDir()) {
-            return edge;
+void BFBAlgorithm::generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment) {
+    for (auto source: {*sourceSegment.getPositiveVertex(),*sourceSegment.getNegativeVertex()})
+        for (auto target: {*targetSegment.getPositiveVertex(),*targetSegment.getNegativeVertex()}) {
+            int sourceDir = source.getDir() == '+' ? 0 : 1;
+            int targetDir = source.getDir() == '+' ? 0 : 1;
+            for (Edge *edge: *source.getEdgesAsSource()) {
+                if (edge->getTarget()->getId() == target.getId() && edge->getTarget()->getDir() == target.getDir()) {
+                    adjacentMatrix[source.getId()][target.getId()][sourceDir][targetDir] = edge;
+                }
+            };
         }
-    };
-    return nullptr;
 }

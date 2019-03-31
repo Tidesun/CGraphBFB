@@ -74,6 +74,6 @@ int main(int argc, char *argv[]) {
     g.calculateCopyNum();
     BFBAlgorithm bfbAlgo = BFBAlgorithm(g);
     bfbAlgo.BFBTraverseUtil();
-    bfbAlgo.getResult();
+    bfbAlgo.printResult();
     return 0;
 }
