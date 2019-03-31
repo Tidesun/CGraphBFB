@@ -14,8 +14,9 @@ BFBAlgorithm::BFBAlgorithm(Graph g){
         allSegments.push_back(*segment);
         cnSum += segment->getWeight()->getCopyNum();
     }
-    resultCost = (numeric_limits<double>::max)();
-    observedLen = (int) floor(cnSum);
+    resultCost = cnSum + 1;
+    //observedLen = (int) cnSum;
+    observedLen = 170;
     baseDir = '+';
     haploidDepth = g.getAvgRawCoverage()/g.getAvgPloidy();
 }
@@ -59,7 +60,7 @@ void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
         return;
     }
     // if the path is too long or cost has exceeded the best cost
-    if (path.size() > observedLen || cost>=resultCost){
+    if (path.size() >= observedLen || cost>=resultCost){
         return;
     }
     Vertex lastVertex = path.back();
