@@ -23,15 +23,17 @@ class BFBAlgorithm {
         int observedLen;
         char baseDir;
         double haploidDepth;
+        double costThreshold;
         unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
         unordered_map<int,unordered_map<int,array<array<Edge*,2>,2>>> adjacentMatrix;
     public:
-        BFBAlgorithm(Graph g);
-        vector<Vertex> createBase();
+        BFBAlgorithm(Graph g, double _costThreshold);
+        vector<Vertex> createBase(double &cost);
         vector<int> calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens);
         void BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double loss);
         vector<Vertex>  getCandidates(Vertex lastVertex);
         void generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment);
+        Edge* getConnectedEdge(Vertex lastVertex,Vertex candidate,double &tempCost);
         bool BFBTraverseUtil();
         void printResult();
 };
