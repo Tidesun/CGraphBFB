@@ -19,11 +19,10 @@ BFBAlgorithm::BFBAlgorithm(Graph g, double _costThreshold = 0.0){
     baseDir = '+';
     haploidDepth = g.getAvgRawCoverage()/g.getAvgPloidy();
 }
-vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<vector<int>> allArmLens){
+vector<int> BFBAlgorithm::calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<int> lastArmLens){
     vector<int> candidateArmLens(1,0);
     // indicate whether a palindrome suffix is found if add candidate
-    int lastPos = (int) allArmLens.size() - 1;
-    vector<int> lastArmLens = allArmLens.back();
+    int lastPos = (int) BFBPath.size() - 1;
     // iterate over all palindromes suffix ended with last char
     for (auto armLen : lastArmLens){
         // if a symmetric segment to candidate is found
@@ -54,7 +53,7 @@ vector<Vertex> BFBAlgorithm::createBase(double &cost){
     }
     return base;
 }
-void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLens,double cost){
+void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<int> lastArmLens,double cost){
     // if a better solution is found
     if (path.size()== observedLen && cost<resultCost) {
         resultPath = path;
@@ -63,28 +62,24 @@ void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
         for (auto & vertex: resultPath) {
             res += vertex.getInfo() + ' ';
         }
-        cout<<res<<endl;
-        cout<< resultCost<< endl;
-        cout<< resultCost/observedLen<<endl;
         return;
     }
     // if the path is too long or cost has exceeded the best cost
+//    if (path.size() >= observedLen){
     if (path.size() >= observedLen || cost>=resultCost || cost>costThreshold*observedLen){
         return;
     }
     Vertex lastVertex = path.back();
     vector<Vertex> candidates = getCandidates(lastVertex);
     for (auto & candidate:candidates) {
-        vector<int> candidateArmLens = calculateCandidateArmLens(candidate,path,allArmLens);
+        vector<int> candidateArmLens = calculateCandidateArmLens(candidate,path,lastArmLens);
         // if the candidate can form a palindrome
         if (candidateArmLens.size()>1) {
             double tempCost = cost;
-            allArmLens.push_back(candidateArmLens);
             path.push_back(candidate);
             Edge* connectedEdge = getConnectedEdge(lastVertex,candidate,tempCost);
             connectedEdge->traverse();
-            BFBTraverse(path,allArmLens,tempCost);
-            allArmLens.pop_back();
+            BFBTraverse(path,candidateArmLens,tempCost);
             path.pop_back();
             connectedEdge->recover();
         }
@@ -92,10 +87,10 @@ void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<vector<int>> allArmLen
 
 }
 bool BFBAlgorithm::BFBTraverseUtil() {
-    vector<vector<int>> allArmLens(allSegments.size(),vector<int>(1,0));
+    vector<int> lastArmLens(1,0);
     double cost = 0.0;
     vector<Vertex> path = createBase(cost);
-    BFBTraverse(path,allArmLens,cost);
+    BFBTraverse(path,lastArmLens,cost);
     printResult();
 }
 void BFBAlgorithm::printResult() {

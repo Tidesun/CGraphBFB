@@ -70,5 +70,4 @@ with open('sim.lh','w+') as f:
     #645.453313600533
     f.write('''SAMPLE sim_1\nAVG_DP 4\nPURITY 1\nAVG_PLOIDY 2\nPLOIDY 2m1\n''')
     f.write('SOURCE H:{}\nSINK H:{}\n'.format(source,sink))
-    f.write(simulate(source,sink,5))
-        
+    f.write(simulate(source,sink,5))    
