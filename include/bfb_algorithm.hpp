@@ -30,7 +30,7 @@ class BFBAlgorithm {
         BFBAlgorithm(Graph g, double _costThreshold);
         vector<Vertex> createBase(double &cost);
         vector<int> calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<int> lastArmLens);
-        void BFBTraverse(vector<Vertex> path,vector<int> lastArmLens,double loss);
+        void BFBTraverse(vector<Vertex>* path,vector<int> lastArmLens,double loss);
         vector<Vertex>  getCandidates(Vertex lastVertex);
         void generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment);
         Edge* getConnectedEdge(Vertex lastVertex,Vertex candidate,double &tempCost);

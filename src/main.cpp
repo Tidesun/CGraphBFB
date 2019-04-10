@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
      costThreshold = atof(argv[1]);
     }
     Graph g = Graph();
-    g.readGraph("./static/sim.lh");
+    g.readGraph("../static/sim.lh");
     g.calculateCopyNum();
     BFBAlgorithm bfbAlgorithm = BFBAlgorithm(g,costThreshold);
     auto start = std::chrono::system_clock::now();

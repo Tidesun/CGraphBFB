@@ -53,10 +53,10 @@ vector<Vertex> BFBAlgorithm::createBase(double &cost){
     }
     return base;
 }
-void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<int> lastArmLens,double cost){
+void BFBAlgorithm::BFBTraverse(vector <Vertex>* path,vector<int> lastArmLens,double cost){
     // if a better solution is found
-    if (path.size()== observedLen && cost<resultCost) {
-        resultPath = path;
+    if (path->size()== observedLen && cost<resultCost) {
+        resultPath = *path;
         resultCost = cost;
         string res;
         for (auto & vertex: resultPath) {
@@ -66,21 +66,21 @@ void BFBAlgorithm::BFBTraverse(vector<Vertex> path,vector<int> lastArmLens,doubl
     }
     // if the path is too long or cost has exceeded the best cost
 //    if (path.size() >= observedLen){
-    if (path.size() >= observedLen || cost>=resultCost || cost>costThreshold*observedLen){
+    if (path->size() >= observedLen || cost>=resultCost || cost>costThreshold*observedLen){
         return;
     }
-    Vertex lastVertex = path.back();
+    Vertex lastVertex = path->back();
     vector<Vertex> candidates = getCandidates(lastVertex);
     for (auto & candidate:candidates) {
-        vector<int> candidateArmLens = calculateCandidateArmLens(candidate,path,lastArmLens);
+        vector<int> candidateArmLens = calculateCandidateArmLens(candidate,*path,lastArmLens);
         // if the candidate can form a palindrome
         if (candidateArmLens.size()>1) {
             double tempCost = cost;
-            path.push_back(candidate);
+            path->push_back(candidate);
             Edge* connectedEdge = getConnectedEdge(lastVertex,candidate,tempCost);
             connectedEdge->traverse();
             BFBTraverse(path,candidateArmLens,tempCost);
-            path.pop_back();
+            path->pop_back();
             connectedEdge->recover();
         }
     }
@@ -90,7 +90,7 @@ bool BFBAlgorithm::BFBTraverseUtil() {
     vector<int> lastArmLens(1,0);
     double cost = 0.0;
     vector<Vertex> path = createBase(cost);
-    BFBTraverse(path,lastArmLens,cost);
+    BFBTraverse(&path,lastArmLens,cost);
     printResult();
 }
 void BFBAlgorithm::printResult() {
