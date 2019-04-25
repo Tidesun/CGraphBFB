@@ -16,25 +16,25 @@
 #include "Graph.hpp"
 using namespace std;
 class BFBAlgorithm {
-    private:
-        vector<Segment> allSegments;
-        vector<Vertex> resultPath;
-        double resultCost;
-        int observedLen;
-        char baseDir;
-        double haploidDepth;
-        double costThreshold;
-        unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
-        unordered_map<int,unordered_map<int,array<array<Edge*,2>,2>>> adjacentMatrix;
-    public:
-        BFBAlgorithm(Graph g, double _costThreshold);
-        vector<Vertex> createBase(double &cost);
-        vector<int> calculateCandidateArmLens(Vertex candidate,vector<Vertex> BFBPath, vector<int> lastArmLens);
-        void BFBTraverse(vector<Vertex>* path,vector<int> lastArmLens,double loss);
-        vector<Vertex>  getCandidates(Vertex lastVertex);
-        void generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment);
-        Edge* getConnectedEdge(Vertex lastVertex,Vertex candidate,double &tempCost);
-        bool BFBTraverseUtil();
-        void printResult();
+protected:
+    vector<Segment> allSegments;
+    vector<Vertex> resultPath;
+    double resultCost;
+    int observedLen;
+    char baseDir;
+    char extendingDir;
+    double haploidDepth;
+    double costThreshold;
+    unordered_map<int,pair<Segment*,Segment*>> vertexOrderMap;
+    unordered_map<int,unordered_map<int,array<array<Edge*,2>,2>>> adjacentMatrix;
+public:
+    BFBAlgorithm(Graph* g, double _costThreshold,char _baseDir,char _extendingDir);
+    ~BFBAlgorithm();
+    vector<Vertex> createBase(double &cost);
+    void generateAdjacentMatrix(Segment sourceSegment, Segment targetSegment);
+    Edge* getConnectedEdge(Vertex lastVertex,Vertex candidate,double &tempCost);
+    void printResult();
+    virtual void traverseUtil() = 0;
+
 };
 #endif /* bfb_algorithm_hpp */

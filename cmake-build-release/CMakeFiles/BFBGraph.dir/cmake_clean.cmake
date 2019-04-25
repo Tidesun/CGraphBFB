@@ -9,6 +9,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o"
   "CMakeFiles/BFBGraph.dir/src/Weight.cpp.o"
   "CMakeFiles/BFBGraph.dir/main.cpp.o"
+  "CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o"
+  "CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o"
+  "CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o"
+  "CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o"
   "BFBGraph.pdb"
   "BFBGraph"
 )

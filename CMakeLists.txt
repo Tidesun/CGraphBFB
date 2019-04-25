@@ -27,6 +27,6 @@ add_executable(BFBGraph
         src/Segment.cpp
         src/Vertex.cpp
         src/Weight.cpp
-        main.cpp )
+        main.cpp src/file_reader.cpp include/file_reader.hpp src/foldback_algorithm.cpp include/foldback_algorithm.hpp src/traverse_algorithm.cpp include/traverse_algorithm.hpp src/bfb_calculator.cpp include/bfb_calculator.hpp)
         #src/httphandler.cpp include/httphandler.h include/stdafx.h)
 #target_link_libraries(BFBGraph ${Boost_LIBRARIES} cpprestsdk::cpprest)

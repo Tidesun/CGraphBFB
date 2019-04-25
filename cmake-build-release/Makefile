@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tidesun/repos/BFBGraph
+CMAKE_SOURCE_DIR = /Users/tidesun/repos/BFB/BFBGraph
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tidesun/repos/BFBGraph/cmake-build-release
+CMAKE_BINARY_DIR = /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles /Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -366,6 +366,87 @@ src/bfb_algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s
 .PHONY : src/bfb_algorithm.cpp.s
 
+src/bfb_calculator.o: src/bfb_calculator.cpp.o
+
+.PHONY : src/bfb_calculator.o
+
+# target to build an object file
+src/bfb_calculator.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o
+.PHONY : src/bfb_calculator.cpp.o
+
+src/bfb_calculator.i: src/bfb_calculator.cpp.i
+
+.PHONY : src/bfb_calculator.i
+
+# target to preprocess a source file
+src/bfb_calculator.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.i
+.PHONY : src/bfb_calculator.cpp.i
+
+src/bfb_calculator.s: src/bfb_calculator.cpp.s
+
+.PHONY : src/bfb_calculator.s
+
+# target to generate assembly for a file
+src/bfb_calculator.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.s
+.PHONY : src/bfb_calculator.cpp.s
+
+src/file_reader.o: src/file_reader.cpp.o
+
+.PHONY : src/file_reader.o
+
+# target to build an object file
+src/file_reader.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o
+.PHONY : src/file_reader.cpp.o
+
+src/file_reader.i: src/file_reader.cpp.i
+
+.PHONY : src/file_reader.i
+
+# target to preprocess a source file
+src/file_reader.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/file_reader.cpp.i
+.PHONY : src/file_reader.cpp.i
+
+src/file_reader.s: src/file_reader.cpp.s
+
+.PHONY : src/file_reader.s
+
+# target to generate assembly for a file
+src/file_reader.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/file_reader.cpp.s
+.PHONY : src/file_reader.cpp.s
+
+src/foldback_algorithm.o: src/foldback_algorithm.cpp.o
+
+.PHONY : src/foldback_algorithm.o
+
+# target to build an object file
+src/foldback_algorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o
+.PHONY : src/foldback_algorithm.cpp.o
+
+src/foldback_algorithm.i: src/foldback_algorithm.cpp.i
+
+.PHONY : src/foldback_algorithm.i
+
+# target to preprocess a source file
+src/foldback_algorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.i
+.PHONY : src/foldback_algorithm.cpp.i
+
+src/foldback_algorithm.s: src/foldback_algorithm.cpp.s
+
+.PHONY : src/foldback_algorithm.s
+
+# target to generate assembly for a file
+src/foldback_algorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.s
+.PHONY : src/foldback_algorithm.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -392,6 +473,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/traverse_algorithm.o: src/traverse_algorithm.cpp.o
+
+.PHONY : src/traverse_algorithm.o
+
+# target to build an object file
+src/traverse_algorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o
+.PHONY : src/traverse_algorithm.cpp.o
+
+src/traverse_algorithm.i: src/traverse_algorithm.cpp.i
+
+.PHONY : src/traverse_algorithm.i
+
+# target to preprocess a source file
+src/traverse_algorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.i
+.PHONY : src/traverse_algorithm.cpp.i
+
+src/traverse_algorithm.s: src/traverse_algorithm.cpp.s
+
+.PHONY : src/traverse_algorithm.s
+
+# target to generate assembly for a file
+src/traverse_algorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/BFBGraph.dir/build.make CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.s
+.PHONY : src/traverse_algorithm.cpp.s
 
 # Help Target
 help:
@@ -429,9 +537,21 @@ help:
 	@echo "... src/bfb_algorithm.o"
 	@echo "... src/bfb_algorithm.i"
 	@echo "... src/bfb_algorithm.s"
+	@echo "... src/bfb_calculator.o"
+	@echo "... src/bfb_calculator.i"
+	@echo "... src/bfb_calculator.s"
+	@echo "... src/file_reader.o"
+	@echo "... src/file_reader.i"
+	@echo "... src/file_reader.s"
+	@echo "... src/foldback_algorithm.o"
+	@echo "... src/foldback_algorithm.i"
+	@echo "... src/foldback_algorithm.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/traverse_algorithm.o"
+	@echo "... src/traverse_algorithm.i"
+	@echo "... src/traverse_algorithm.s"
 .PHONY : help
 
 

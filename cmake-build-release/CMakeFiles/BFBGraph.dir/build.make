@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tidesun/repos/BFBGraph
+CMAKE_SOURCE_DIR = /Users/tidesun/repos/BFB/BFBGraph
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tidesun/repos/BFBGraph/cmake-build-release
+CMAKE_BINARY_DIR = /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BFBGraph.dir/depend.make
@@ -59,133 +59,185 @@ include CMakeFiles/BFBGraph.dir/flags.make
 
 CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o: ../src/bfb_algorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o -c /Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/bfb_algorithm.cpp
 
 CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp > CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/bfb_algorithm.cpp > CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/bfb_algorithm.cpp -o CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/bfb_algorithm.cpp -o CMakeFiles/BFBGraph.dir/src/bfb_algorithm.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Edge.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Edge.cpp.o: ../src/Edge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BFBGraph.dir/src/Edge.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Edge.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Edge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BFBGraph.dir/src/Edge.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Edge.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Edge.cpp
 
 CMakeFiles/BFBGraph.dir/src/Edge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Edge.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Edge.cpp > CMakeFiles/BFBGraph.dir/src/Edge.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Edge.cpp > CMakeFiles/BFBGraph.dir/src/Edge.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Edge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Edge.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Edge.cpp -o CMakeFiles/BFBGraph.dir/src/Edge.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Edge.cpp -o CMakeFiles/BFBGraph.dir/src/Edge.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o: ../src/Exceptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Exceptions.cpp
 
 CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Exceptions.cpp > CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Exceptions.cpp > CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Exceptions.cpp -o CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Exceptions.cpp -o CMakeFiles/BFBGraph.dir/src/Exceptions.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Graph.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Graph.cpp.o: ../src/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BFBGraph.dir/src/Graph.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Graph.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BFBGraph.dir/src/Graph.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Graph.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Graph.cpp
 
 CMakeFiles/BFBGraph.dir/src/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Graph.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Graph.cpp > CMakeFiles/BFBGraph.dir/src/Graph.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Graph.cpp > CMakeFiles/BFBGraph.dir/src/Graph.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Graph.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Graph.cpp -o CMakeFiles/BFBGraph.dir/src/Graph.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Graph.cpp -o CMakeFiles/BFBGraph.dir/src/Graph.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Junction.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Junction.cpp.o: ../src/Junction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BFBGraph.dir/src/Junction.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Junction.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Junction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BFBGraph.dir/src/Junction.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Junction.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Junction.cpp
 
 CMakeFiles/BFBGraph.dir/src/Junction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Junction.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Junction.cpp > CMakeFiles/BFBGraph.dir/src/Junction.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Junction.cpp > CMakeFiles/BFBGraph.dir/src/Junction.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Junction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Junction.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Junction.cpp -o CMakeFiles/BFBGraph.dir/src/Junction.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Junction.cpp -o CMakeFiles/BFBGraph.dir/src/Junction.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/main.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BFBGraph.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/main.cpp.o -c /Users/tidesun/repos/BFBGraph/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BFBGraph.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/main.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/main.cpp
 
 CMakeFiles/BFBGraph.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/main.cpp > CMakeFiles/BFBGraph.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/main.cpp > CMakeFiles/BFBGraph.dir/src/main.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/main.cpp -o CMakeFiles/BFBGraph.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/main.cpp -o CMakeFiles/BFBGraph.dir/src/main.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Segment.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Segment.cpp.o: ../src/Segment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BFBGraph.dir/src/Segment.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Segment.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Segment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BFBGraph.dir/src/Segment.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Segment.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Segment.cpp
 
 CMakeFiles/BFBGraph.dir/src/Segment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Segment.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Segment.cpp > CMakeFiles/BFBGraph.dir/src/Segment.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Segment.cpp > CMakeFiles/BFBGraph.dir/src/Segment.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Segment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Segment.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Segment.cpp -o CMakeFiles/BFBGraph.dir/src/Segment.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Segment.cpp -o CMakeFiles/BFBGraph.dir/src/Segment.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o: ../src/Vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Vertex.cpp
 
 CMakeFiles/BFBGraph.dir/src/Vertex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Vertex.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Vertex.cpp > CMakeFiles/BFBGraph.dir/src/Vertex.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Vertex.cpp > CMakeFiles/BFBGraph.dir/src/Vertex.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Vertex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Vertex.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Vertex.cpp -o CMakeFiles/BFBGraph.dir/src/Vertex.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Vertex.cpp -o CMakeFiles/BFBGraph.dir/src/Vertex.cpp.s
 
 CMakeFiles/BFBGraph.dir/src/Weight.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/src/Weight.cpp.o: ../src/Weight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BFBGraph.dir/src/Weight.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Weight.cpp.o -c /Users/tidesun/repos/BFBGraph/src/Weight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BFBGraph.dir/src/Weight.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/Weight.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/Weight.cpp
 
 CMakeFiles/BFBGraph.dir/src/Weight.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/Weight.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/src/Weight.cpp > CMakeFiles/BFBGraph.dir/src/Weight.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/Weight.cpp > CMakeFiles/BFBGraph.dir/src/Weight.cpp.i
 
 CMakeFiles/BFBGraph.dir/src/Weight.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/Weight.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/src/Weight.cpp -o CMakeFiles/BFBGraph.dir/src/Weight.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/Weight.cpp -o CMakeFiles/BFBGraph.dir/src/Weight.cpp.s
 
 CMakeFiles/BFBGraph.dir/main.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
 CMakeFiles/BFBGraph.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BFBGraph.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/main.cpp.o -c /Users/tidesun/repos/BFBGraph/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BFBGraph.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/main.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/main.cpp
 
 CMakeFiles/BFBGraph.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFBGraph/main.cpp > CMakeFiles/BFBGraph.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/main.cpp > CMakeFiles/BFBGraph.dir/main.cpp.i
 
 CMakeFiles/BFBGraph.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFBGraph/main.cpp -o CMakeFiles/BFBGraph.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/main.cpp -o CMakeFiles/BFBGraph.dir/main.cpp.s
+
+CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
+CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o: ../src/file_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/file_reader.cpp
+
+CMakeFiles/BFBGraph.dir/src/file_reader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/file_reader.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/file_reader.cpp > CMakeFiles/BFBGraph.dir/src/file_reader.cpp.i
+
+CMakeFiles/BFBGraph.dir/src/file_reader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/file_reader.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/file_reader.cpp -o CMakeFiles/BFBGraph.dir/src/file_reader.cpp.s
+
+CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
+CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o: ../src/foldback_algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/foldback_algorithm.cpp
+
+CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/foldback_algorithm.cpp > CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.i
+
+CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/foldback_algorithm.cpp -o CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.s
+
+CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
+CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o: ../src/traverse_algorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/traverse_algorithm.cpp
+
+CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/traverse_algorithm.cpp > CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.i
+
+CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/traverse_algorithm.cpp -o CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.s
+
+CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o: CMakeFiles/BFBGraph.dir/flags.make
+CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o: ../src/bfb_calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o -c /Users/tidesun/repos/BFB/BFBGraph/src/bfb_calculator.cpp
+
+CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/tidesun/repos/BFB/BFBGraph/src/bfb_calculator.cpp > CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.i
+
+CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/tidesun/repos/BFB/BFBGraph/src/bfb_calculator.cpp -o CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.s
 
 # Object files for target BFBGraph
 BFBGraph_OBJECTS = \
@@ -198,7 +250,11 @@ BFBGraph_OBJECTS = \
 "CMakeFiles/BFBGraph.dir/src/Segment.cpp.o" \
 "CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o" \
 "CMakeFiles/BFBGraph.dir/src/Weight.cpp.o" \
-"CMakeFiles/BFBGraph.dir/main.cpp.o"
+"CMakeFiles/BFBGraph.dir/main.cpp.o" \
+"CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o" \
+"CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o" \
+"CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o" \
+"CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o"
 
 # External object files for target BFBGraph
 BFBGraph_EXTERNAL_OBJECTS =
@@ -213,9 +269,13 @@ BFBGraph: CMakeFiles/BFBGraph.dir/src/Segment.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/src/Vertex.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/src/Weight.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/main.cpp.o
+BFBGraph: CMakeFiles/BFBGraph.dir/src/file_reader.cpp.o
+BFBGraph: CMakeFiles/BFBGraph.dir/src/foldback_algorithm.cpp.o
+BFBGraph: CMakeFiles/BFBGraph.dir/src/traverse_algorithm.cpp.o
+BFBGraph: CMakeFiles/BFBGraph.dir/src/bfb_calculator.cpp.o
 BFBGraph: CMakeFiles/BFBGraph.dir/build.make
 BFBGraph: CMakeFiles/BFBGraph.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable BFBGraph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable BFBGraph"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BFBGraph.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -228,6 +288,6 @@ CMakeFiles/BFBGraph.dir/clean:
 .PHONY : CMakeFiles/BFBGraph.dir/clean
 
 CMakeFiles/BFBGraph.dir/depend:
-	cd /Users/tidesun/repos/BFBGraph/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tidesun/repos/BFBGraph /Users/tidesun/repos/BFBGraph /Users/tidesun/repos/BFBGraph/cmake-build-release /Users/tidesun/repos/BFBGraph/cmake-build-release /Users/tidesun/repos/BFBGraph/cmake-build-release/CMakeFiles/BFBGraph.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/tidesun/repos/BFB/BFBGraph /Users/tidesun/repos/BFB/BFBGraph /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release /Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles/BFBGraph.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BFBGraph.dir/depend
 

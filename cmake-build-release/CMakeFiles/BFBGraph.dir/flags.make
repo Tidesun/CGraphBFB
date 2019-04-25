@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Pl
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/tidesun/repos/BFBGraph/include 
+CXX_INCLUDES = -I/Users/tidesun/repos/BFB/BFBGraph/include 
 
