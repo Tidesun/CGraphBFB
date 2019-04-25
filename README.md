@@ -1,1 +1,1 @@
-# BFBDetectionGraph
+# BFBGraph

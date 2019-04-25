@@ -1,3 +1,0 @@
-/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/tidesun/repos/BFB/BFBGraph/cmake-build-release/CMakeFiles/BFBGraph.dir
